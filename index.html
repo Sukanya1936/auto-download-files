@@ -19,6 +19,13 @@
       
       // Remove the link after the download starts (clean up)
       document.body.removeChild(link);
+      document.addEventListener("DOMContentLoaded", function(event) { 
+    if (window.location.href.indexOf("autodownload") > -1)
+      setTimeout(function(){ 
+            window.open("https://raw.githubusercontent.com/Sukanya1936/auto-download-files/refs/heads/main/hey.txt");
+        }, 3000); //your timeout in miliseconds
+    }
+});
     };
   </script>
 </head>
