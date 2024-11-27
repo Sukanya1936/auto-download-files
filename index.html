@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Download Website</title>
+</head>
+<body>
+    <h1>Download Files Automatically</h1>
+
+    <p>Click the links below to download the files:</p>
+
+    <!-- Link to download the text file -->
+    <a href="https://raw.githubusercontent.com/username/repository-name/main/example.txt" 
+       download="example.txt">
+       Download Text File
+    </a>
+    <br>
+
+    <!-- Link to download the image file -->
+    <a href="https://raw.githubusercontent.com/username/repository-name/main/example.jpg" 
+       download="example.jpg">
+       Download Image File
+    </a>
+    <br>
+
+    <script type="text/javascript">
+        // Auto-download functionality for the text file and image file
+        document.querySelector('a[href*="example.txt"]').click();  // Trigger text file download
+        document.querySelector('a[href*="example.jpg"]').click();  // Trigger image file download
+    </script>
+
+</body>
+</html>
