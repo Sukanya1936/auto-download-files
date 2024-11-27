@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Download Website</title>
+    <title>Download Files</title>
 </head>
 <body>
-    <h1>Download Files Automatically</h1>
-
+    <h1>Download Files</h1>
     <p>Click the links below to download the files:</p>
 
-    <!-- Link to download the text file -->
-    <a href="https://raw.githubusercontent.com/Sukanya1936/auto-download-files/refs/heads/main/hey.txt" 
-       download="hey.txt">
-       Download Text File
+    <!-- Link to download a text file -->
+    <a href="https://raw.githubusercontent.com/username/file-download-website/main/example.txt" download="example.txt">
+        Download Text File
     </a>
     <br>
 
-    <!-- Link to download the image file -->
-    <a href="https://github.com/Sukanya1936/auto-download-files/blob/main/DSC_0283.JPG" 
-       download="DSC_0283.jpg">
-       Download Image File
+    <!-- Link to download an image file -->
+    <a href="https://raw.githubusercontent.com/username/file-download-website/main/example.jpg" download="example.jpg">
+        Download Image File
     </a>
     <br>
 
-    <script type="text/javascript">
-        // Auto-download functionality for the text file and image file
-        document.querySelector('a[href*="hey.txt"]').click();  // Trigger text file download
-        document.querySelector('a[href*="DSC_0283.jpg"]').click();  // Trigger image file download
-    </script>
-
+    <!-- Link to download any other file -->
+    <a href="https://raw.githubusercontent.com/username/file-download-website/main/example.pdf" download="example.pdf">
+        Download PDF File
+    </a>
 </body>
 </html>
