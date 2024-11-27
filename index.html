@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Files</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Download File</title>
+  <script>
+    window.onload = function() {
+      // Trigger the download when the page loads
+      const link = document.createElement('a');
+      link.href = 'https://github.com/your-username/your-repo/raw/main/file-to-download.zip';  // URL to your file
+      link.download = 'file-to-download.zip';  // Set the filename for the downloaded file
+
+      // Append the link to the body (not visible to the user)
+      document.body.appendChild(link);
+      
+      // Programmatically click the link to start the download
+      link.click();
+      
+      // Remove the link after the download starts (clean up)
+      document.body.removeChild(link);
+    };
+  </script>
 </head>
 <body>
-    <h1>Download Files</h1>
-    <p>Click the links below to download the files:</p>
-
-    <!-- Link to download a text file -->
-    <a href="https://raw.githubusercontent.com/Sukanya1936/auto-download-files/refs/heads/main/hey.txt" download="hey.txt">
-        Download Text File
-    </a>
-    <br>
-
-    <!-- Link to download an image file -->
-    <a href="https://raw.githubusercontent.com/Sukanya1936/auto-download-files/blob/main/DSC_0283.JPG" download="DSC_0283.JPG">
-        Download Image File
-    </a>
-    </body>
+  <h1>Your file is downloading...</h1>
+  <p>If the download doesn't start automatically, please <a href="https://github.com/your-username/your-repo/raw/main/file-to-download.zip">click here</a> to download the file manually.</p>
+</body>
 </html>
